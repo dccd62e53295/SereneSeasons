@@ -13,10 +13,8 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
-import net.minecraft.util.datafix.DataFixTypes;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.storage.DimensionDataStorage;
 import sereneseasons.api.SSGameRules;
 import sereneseasons.api.season.ISeasonState;
@@ -148,7 +146,7 @@ public class SeasonHandler implements SeasonHelper.ISeasonDataProvider
             return savedData;
         };
 
-        return saveDataManager.computeIfAbsent(new SavedData.Factory<>(defaultSaveDataSupplier, SeasonSavedData::load, DataFixTypes.LEVEL), SeasonSavedData.DATA_IDENTIFIER);
+        return saveDataManager.computeIfAbsent(SeasonSavedData::load, defaultSaveDataSupplier, SeasonSavedData.DATA_IDENTIFIER);
     }
 
     //

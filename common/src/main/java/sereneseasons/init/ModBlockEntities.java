@@ -14,7 +14,6 @@ import sereneseasons.api.SSBlocks;
 import sereneseasons.block.entity.SeasonSensorBlockEntity;
 import sereneseasons.core.SereneSeasons;
 
-import java.util.List;
 import java.util.function.BiConsumer;
 
 public class ModBlockEntities

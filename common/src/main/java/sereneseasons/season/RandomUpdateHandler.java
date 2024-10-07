@@ -102,7 +102,6 @@ public class RandomUpdateHandler
 
 		ServerLevel level = (ServerLevel)event.getLevel();
 		Season.SubSeason subSeason = SeasonHelper.getSeasonState(level).getSubSeason();
-		Season season = subSeason.getSeason();
 
 		SeasonsConfig.SeasonProperties seasonProperties = ModConfig.seasons.getSeasonProperties(subSeason);
 		float meltRand = seasonProperties.meltChance() / 100.0F;
